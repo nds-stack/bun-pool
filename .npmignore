@@ -1,0 +1,14 @@
+agents/
+context7.json
+AGENTS.md
+PROJECT.md
+RULES.md
+TODO.md
+CHANGELOG.md
+test/
+bench/
+.eslintrc*
+tsconfig.json
+tsconfig.build.json
+*.test.ts
+*.bench.ts
