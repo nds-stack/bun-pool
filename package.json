@@ -1,11 +1,13 @@
 {
-  "name": "@nds-stack/bun-pool", "version": "0.1.0-alpha.0",
+  "name": "@nds-stack/bun-pool", "version": "0.1.0-beta.0",
   "description": "Generic connection pool for Bun — min/max, idle timeout, health check, zero deps",
   "author": "nds-stack <nds.stack@gmail.com>", "type": "module",
   "main": "dist/index.js", "types": "dist/index.d.ts",
   "scripts": {
     "test": "bun test", "lint": "eslint .", "typecheck": "tsc --noEmit",
-    "prepublishOnly": "bun run lint && bun run typecheck && bun test && bun run build",
+    "clean": "bun run --bun \"rm -rf dist\"",
+"bench": "bun run bench/runner.ts",
+"prepublishOnly": "bun run lint && bun run typecheck && bun test && bun run build",
     "build": "bun build ./src/index.ts --outdir=./dist --target=bun --format=esm && tsc -p tsconfig.build.json"
   },
   "files": ["dist/", "README.md"],
